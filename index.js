@@ -29,6 +29,7 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+console.log(createMenuItem('pizza', 5, 'lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,9 +48,16 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function (choice){
+    if(choice === 'teacher' || choice === 'student'){
+     return this.price * 0.75;
 }
-
+else{
+    return this.price * 0.9;
+  }
+}
+}
+  console.log(burger.discount('teacher'));
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -69,7 +77,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-
+console.log(reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -92,9 +100,17 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
-}
+function addReview(array, name, rating, feedback){
+  const newReview = {
+    name: name,
+    rating: rating,
+    feedback: feedback
+  }
+  for(let i = 0; i < array.length; i++){
+    return 
+  }
+
+  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
